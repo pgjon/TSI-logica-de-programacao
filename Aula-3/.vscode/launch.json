@@ -1,0 +1,35 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "name": "C/C++ Runner: Debug Session",
+            "type": "cppdbg",
+            "request": "launch",
+            "args": [],
+            "stopAtEntry": false,
+            "externalConsole": true,
+            "cwd": "d:/IFSul-Documentos/TSI/Semestre-1/Logica-de-Programacao/Aula-3",
+            "program": "d:/IFSul-Documentos/TSI/Semestre-1/Logica-de-Programacao/Aula-3/build/Debug",
+            "MIMode": "gdb",
+            "miDebuggerPath": "gdb",
+            "setupCommands": [
+                {
+                    "description": "Enable pretty-printing for gdb",
+                    "text": "-enable-pretty-printing",
+                    "ignoreFailures": true
+                }
+            ]
+        },
+        {
+            "name": "(Windows) Iniciar",
+            "type": "cppvsdbg",
+            "request": "launch",
+            "program": "insira o nome do programa, por exemplo ${workspaceFolder}/a.exe",
+            "args": [],
+            "stopAtEntry": false,
+            "cwd": "${fileDirname}",
+            "environment": [],
+            "console": "externalTerminal"
+        }
+    ]
+}
