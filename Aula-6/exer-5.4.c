@@ -9,7 +9,9 @@
             
             Escreva um algoritmo que leia o número de litros vendidos, o tipo de combustível 
             (codificado da seguinte forma: 1-álcool 2-Gasolina), o preço do combustível, calcule e imprima o valor a ser pago 
-            pelo cliente.OBS: Considere que serão informados apenas códigos válidos.
+            pelo cliente.
+            
+            OBS: Considere que serão informados apenas códigos válidos.
             
             [Entrada]     | [Entrada]     | [Entrada]     | [Entrada]
             10 (litros)   | 30 (litros)   | 10 (litros)   | 30 (litros)
@@ -28,12 +30,40 @@ int main(){
     setlocale(LC_ALL, "pt_BR.UTF-8");
 
     // Variables
-    
+    float valor, precoCombustivel, desconto; int litros, combustivel;
+
     // Inputs
+    printf("Qual a quantidade de litros deseja colocar?: "); scanf("%d", &litros);
+    printf("Qual combustivel deseja colocar?\n(1-Álcool ou 2-Gasolina):  "); scanf("%d", &combustivel);
+    printf("Informe o preço do combustível: "); scanf("%f", &precoCombustivel);
 
     // Processing
+    if (combustivel == 1){
+        if ((litros > 0) && (litros <= 20)){
+            desconto = precoCombustivel - precoCombustivel * 0.03; // extrai 3% por litro de alcool
+            valor = desconto * litros; // calcula o valor a pagar
+            
+        }
+        if (litros > 20) {
+            desconto = precoCombustivel - precoCombustivel * 0.05; // extrai 5% por litro de alcool
+            valor = desconto * litros; // calcula o valor a pagar
+        }  
+    }
 
+    if (combustivel == 2){
+        if ((litros > 0) && (litros <= 15)){
+            desconto = precoCombustivel - precoCombustivel * 0.035; // extrai 3,5% por litro de alcool
+            valor = desconto * litros; // calcula o valor a pagar
+            
+        }
+        if (litros > 15) {
+            desconto = precoCombustivel - precoCombustivel * 0.06; // extrai 6% por litro de alcool
+            valor = desconto * litros; // calcula o valor a pagar
+        }  
+    }
+    
     // Outputs
+    printf("%.2f (t.pago)", valor);
 
     return 0;
 }
