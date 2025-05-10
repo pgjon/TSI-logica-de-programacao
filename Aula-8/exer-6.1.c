@@ -18,12 +18,21 @@ int main(){
     setlocale(LC_ALL, "pt_BR.UTF-8");
 
     // Variables
-    
-    // Inputs
+    int num;
 
     // Processing
+    do {
+        // Inputs
+        printf("Digite um número para eu lhe informar se ele é positivo ou negativo: ");
+        scanf("%d", &num);
 
-    // Outputs
+        // Processing
+        if (num < 0){
+            printf("Negativo\n");
+        } else if (num > 0) {
+            printf("Positivo\n");
+        }
+    }while (num != 0);
 
     return 0;
 }

@@ -17,11 +17,24 @@ int main(){
     setlocale(LC_ALL, "pt_BR.UTF-8");
 
     // Variables
-    
+    float nota1, nota2, media;
+
     // Inputs
 
     // Processing
+    do {
+        printf("Digite a primeira nota: "); scanf("%f", &nota1);
 
+        if (nota1 < 1){
+            break;
+        }
+
+        printf("Digite a segunda nota: "); scanf("%f", &nota2);
+        
+        media = (nota1 + nota2) / 2;
+
+        printf("%.2f\n", media);
+    }while (nota1 > 0);
     // Outputs
 
     return 0;
