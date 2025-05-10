@@ -27,43 +27,32 @@
     [Saída]             | [Saída]             | [Saída]
     TOTALMENTE RECUSADO | RECUSADO POR ALTURA | TOTALMENTE RECUSADO 
 */
-# include <stdio.h>
-# include <stdlib.h>
-# include <locale.h>
-# include <math.h>
 
-int main(){
-    setlocale(LC_ALL, "pt_BR.UTF-8");
-
-    // Variables
+#include <stdio.h>
+// FEITO COM CHATGPT 4.1
+int main() {
     float peso, altura;
 
-    // Inputs
-    printf("Digite sua altura: "), scanf("%f", &altura);
-    printf("Digite seu peso: "), scanf("%f", &peso);
+    // Entrada de dados
+    printf("Digite o peso do jogador (em Kg): ");
+    scanf("%f", &peso);
 
-    // Processing
-    if ((peso >= 70) && (peso <= 80)) {
-        if ((altura < 1.75) || (altura > 1.90)){
-            printf("RECUSADO POR ALTURA");
-        } else {
-            printf("ACEITO");
-        }
+    printf("Digite a altura do jogador (em metros): ");
+    scanf("%f", &altura);
+
+    // Verificações
+    int peso_valido = (peso >= 70.0 && peso <= 80.0); //recebe 1 se estiver na faixa, caso contrario, recebe 0
+    int altura_valida = (altura >= 1.75 && altura <= 1.90); // mesma situação acima.
+
+    if (!peso_valido && !altura_valida) {
+        printf("TOTALMENTE RECUSADO\n");
+    } else if (!peso_valido) {
+        printf("RECUSADO POR PESO\n");
+    } else if (!altura_valida) {
+        printf("RECUSADO POR ALTURA\n");
+    } else {
+        printf("ACEITO\n");
     }
-
-    else if ((altura >= 1.75) && (altura <= 1.90)) {
-        if ((peso < 70) || (peso > 80)){
-            printf("RECUSADO POR PESO");
-        } else {
-            printf("ACEITO");
-        }
-    }
-
-    else if (((altura < 1.75) || (altura > 1.90)) && ((peso < 70) || (peso > 80))){
-        printf("TOTALMENTE RECUSADO");
-    }
-
-    // Outputs
 
     return 0;
 }
