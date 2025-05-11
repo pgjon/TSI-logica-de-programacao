@@ -7,20 +7,28 @@
     2009            Acesso Permitido
 */
 # include <stdio.h>
-# include <stdlib.h>
 # include <locale.h>
-# include <math.h>
 
 int main(){
     setlocale(LC_ALL, "pt_BR.UTF-8");
 
     // Variables
+    int senha;
     
-    // Inputs
-
     // Processing
+    do {
+        // Input
+        printf("Digite sua senha: "); scanf("%d", &senha);
 
-    // Outputs
+        // Processing
+        if (senha == 2009)
+            // Output
+            printf("Acesso Permitido\n");
+        else
+            // Output
+            printf("Senha Inválida\n");
+    } while (senha != 2009);
+    
 
     return 0;
 }

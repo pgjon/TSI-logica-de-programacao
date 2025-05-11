@@ -8,20 +8,33 @@
     2       2
 */
 # include <stdio.h>
-# include <stdlib.h>
 # include <locale.h>
-# include <math.h>
 
 int main(){
     setlocale(LC_ALL, "pt_BR.UTF-8");
 
     // Variables
-    
-    // Inputs
+    int num1, num2;
 
     // Processing
+    while (1) {
+        // Inputs
+        printf("Digite primeiro número: "); scanf("%d", &num1);
+        printf("Digite segundo número: "); scanf("%d", &num2);
 
-    // Outputs
+        // Processing
+        if (num1 == num2) {
+            break;
+        }
 
+        else if (num1 < num2) {
+            // Output
+            printf("Crescente\n");
+        } else {
+            // Output
+            printf("Decrescente\n");
+        }
+    }
+    
     return 0;
 }

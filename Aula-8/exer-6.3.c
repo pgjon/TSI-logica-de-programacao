@@ -9,9 +9,7 @@
     -1 (nota 1)
 */
 # include <stdio.h>
-# include <stdlib.h>
 # include <locale.h>
-# include <math.h>
 
 int main(){
     setlocale(LC_ALL, "pt_BR.UTF-8");
@@ -20,13 +18,13 @@ int main(){
     float nota1, nota2, media;
 
     // Inputs
-
+    
     // Processing
-    do {
+    while (1) {
         printf("Digite a primeira nota: "); scanf("%f", &nota1);
 
         if (nota1 < 1){
-            break;
+            break; // condição para encerrar o programa
         }
 
         printf("Digite a segunda nota: "); scanf("%f", &nota2);
@@ -34,7 +32,7 @@ int main(){
         media = (nota1 + nota2) / 2;
 
         printf("%.2f\n", media);
-    }while (nota1 > 0);
+    }
     // Outputs
 
     return 0;

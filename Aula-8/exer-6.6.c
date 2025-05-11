@@ -7,24 +7,50 @@
     2  2            primeiro
     3 -2            quarto
     4  7            primeiro
-    8 -1            terceiro
+    8 -1            quarto
     -7 1            segundo
     0
 
 */
 # include <stdio.h>
-# include <stdlib.h>
 # include <locale.h>
-# include <math.h>
 
 int main(){
     setlocale(LC_ALL, "pt_BR.UTF-8");
 
     // Variables
+    int x, y;
     
-    // Inputs
-
     // Processing
+    do {
+        // Inputs
+        printf("Digite a coordenada X: "); scanf("%d", &x);
+
+        if (x == 0)
+            break;
+
+        printf("Digite a coordenada Y: "); scanf("%d", &y);
+
+        // Processing
+        // Quadrante 1: x e y > 0
+        if ((x > 0) && (y > 0)) {
+            printf("Primeiro\n");
+        }
+        // Quadrante 2: x < 0 e y > 0
+        if ((x < 0) && (y > 0)) {
+            printf("Segundo\n");
+        }
+        // Quadrante 3: x e y < 0
+        if ((x < 0) && (y < 0)) {
+            printf("Terceiro\n");
+        }
+        // Quadrante 4: x > 0 e y < 0 
+        if ((x > 0) && (y < 0)) {
+            printf("Quarto\n");
+        }
+
+    } while(1);
+    
 
     // Outputs
 

@@ -13,21 +13,58 @@
                         Novo cálculo (1.sim 2.não)?
     2 (não)
 */
-# include <stdio.h>
-# include <stdlib.h>
-# include <locale.h>
-# include <math.h>
+#include <stdio.h>
+#include <locale.h>
 
-int main(){
+int main()
+{
     setlocale(LC_ALL, "pt_BR.UTF-8");
 
     // Variables
-    
-    // Inputs
+    int nota1, nota2, opcao = 1;
+    float media;
 
-    // Processing
+    // Entra no programa 
+    while (opcao == 1) {
+        printf("Digite a 1º nota: ");
+        // Validação da primeira nota
+        do {
+            scanf("%d", &nota1);
+            // Output
+            if (nota1 < 0 || nota1 > 10) {
+                printf("Nota inválida\n");
+                printf("1º nota: ");
+            }
 
-    // Outputs
+        } while (nota1 < 0 || nota1 > 10);
+
+        // Input
+        printf("Digite a 2º nota: ");
+        // Validação da segunda nota
+        do {
+            scanf("%d", &nota2);
+            // Output
+            if (nota2 < 0 || nota2 > 10)
+            {
+                printf("Nota inválida\n");
+                printf("2º nota: ");
+            }
+
+        } while (nota2 < 0 || nota2 > 10);
+
+        // Processing
+        media = (nota1 + nota2) / 2.0;
+        // Output
+        printf("%.1f (média)\n", media);
+
+        // Validação para permanecer fazendo outra operação
+        do {
+            printf("Novo cálculo (1.sim 2.não)? "), scanf("%d", &opcao);
+            // se opcao = 1 continuar no programa.
+            if (opcao == 1)
+                break;
+        } while (opcao != 2);
+    }
 
     return 0;
 }
