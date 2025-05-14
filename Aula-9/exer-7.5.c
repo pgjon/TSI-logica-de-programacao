@@ -16,23 +16,45 @@
                                         5 (quantidade de grenais)
                                         1 (vitórias do Inter)
                                         2 (vitórias do Grêmio)
-                                        2 (quantidade de empates)Grêmio venceu mais grenais
+                                        2 (quantidade de empates)
+                                        Grêmio venceu mais grenais
 */
 # include <stdio.h>
-# include <stdlib.h>
 # include <locale.h>
-# include <math.h>
 
 int main(){
     setlocale(LC_ALL, "pt_BR.UTF-8");
 
     // Variables
-    
-    // Inputs
-
+    int golsInter, golsGremio, opcao;
+    // variáveis contadores
+    int jogos = 0, vitoriaInter = 0, vitoriaGremio = 0, empate = 0;
     // Processing
+    do {
+        printf("Gols Inter: "); scanf("%d", &golsInter);
+        printf("Gols Inter: "); scanf("%d", &golsGremio);
 
+        if (golsInter > golsGremio) {
+            printf("Inter\n");
+            vitoriaInter++;
+        } else if (golsInter < golsGremio) {
+            printf("Grêmio\n");
+            vitoriaGremio++;
+        } else {
+            printf("EMPATE\n");
+            empate++;
+        }
+        jogos++;
+        printf("Novo GRENAL? (1)-sim (2)-não"); scanf("%d", &opcao);
+    } while (opcao != 2);
+    
     // Outputs
+    printf("%d (quantidade de grenais)\n%d (vitórias do Inter)\n%d (vitórias do Grêmio)\n%d (quantidade de empates)\n", jogos, vitoriaInter, vitoriaGremio, empate);
 
+    if (vitoriaInter > vitoriaGremio) {
+        printf("Inter venceu mais grenais");
+    } else {
+        printf("Gremio venceu mais grenais");
+    }
     return 0;
 }

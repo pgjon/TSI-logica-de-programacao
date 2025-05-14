@@ -24,12 +24,30 @@ int main(){
     setlocale(LC_ALL, "pt_BR.UTF-8");
 
     // Variables
-    
+    int opcaoMenu = 0, alcool = 0, gasolina = 0, diesel = 0;
     // Inputs
+    do {
+        printf("\nQual combustível de sua preferência?\n\n");
+        printf("1.Álcool\n2.Gasolina\n3.Diesel\n4.Fim\nOpção: "); scanf("%d", &opcaoMenu);
 
-    // Processing
+        while (opcaoMenu < 1 || opcaoMenu > 4) {
+            printf("Opção Inválida!\nOpcção: "); scanf("%d", &opcaoMenu);
+        }
 
+        if(opcaoMenu == 1) {
+            printf("\nÁlcool");
+            alcool++;
+        } else if (opcaoMenu == 2) {
+            printf("\nGasolina");
+            gasolina++;
+        } else if (opcaoMenu == 3) {
+            printf("Diesel");
+            diesel++;
+        } else if (opcaoMenu == 4) {
+            printf("MUITO OBRIGADO");
+        }
+    } while (opcaoMenu != 4);
     // Outputs
-
+    printf("\n%d (quantidade de Álcool)\n%d (quantidade de Gasolina)\n%d (Diesel)", alcool, gasolina, diesel);
     return 0;
 }
