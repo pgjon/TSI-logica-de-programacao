@@ -15,7 +15,7 @@ int main(){
     setlocale(LC_ALL, "pt_BR.UTF-8");
 
     // Variables
-    int sucessor = 0, antecessor = 0, atual = 0, contador = 0;
+    int sucessor = 0, antecessor = 0, sucessorEntradaAnterior = 0, contador = 0;
 
     // Inputs
     printf("Programa para receber (n) números e imprimir a soma dos sucessores que são menores que os antecessores\n");
@@ -32,13 +32,13 @@ int main(){
         }
 
         if (antecessor > sucessor) {
-            if (atual > antecessor) {
+            if (sucessorEntradaAnterior > antecessor) {
                 contador++;
             }
             contador++;
         }
         
-        atual = sucessor;
+        sucessorEntradaAnterior = sucessor;
     }
     // Outputs
     printf("%d", contador);
