@@ -3,7 +3,10 @@
     
     •Quantos trechos da viagem possuem um valor de pedágio acima do qual Eustógio nega-se a pagar.
     •Quantos trechos foram informados.
-    •Quantos trechos acima de 150 Km de distância possuem um valor de pedágio que Eustógio concorda em pagar.OBS: O algoritmo será encerrado ao ser fornecido um valor de pedágio negativo. Neste caso a leitura da distância não deve ser executada. Os resultados devem ser impressos no final do algoritmo.
+    •Quantos trechos acima de 150 Km de distância possuem um valor de pedágio que Eustógio concorda em pagar.
+    
+    OBS: O algoritmo será encerrado ao ser fornecido um valor de pedágio negativo. Neste caso a leitura da distância não deve ser executada. Os resultados devem ser impressos no final do algoritmo.
+    
     [Entrada]                          [Saída]
     7.00 (valor máximo de pedágio
     que Eustógio aceita pagar)
@@ -19,20 +22,37 @@
                                         2 (trechos acima de 150 Km com valor depedágio aceito por ele)
 */
 # include <stdio.h>
-# include <stdlib.h>
 # include <locale.h>
-# include <math.h>
 
 int main(){
     setlocale(LC_ALL, "pt_BR.UTF-8");
 
     // Variables
+    float valorPedagioCliente, pedagio, distancia;
+    int trechosTotais = 0, trechosAcimaValorPedagioCliente = 0, trechosAcima150concordaPagar = 0; 
     
-    // Inputs
-
+    printf("Qual valor deseja pagar no pedágio?: "); scanf("%f", &valorPedagioCliente);
     // Processing
+    do {
+        // Inputs
+        printf("Valor do pedágio em (R$): "), scanf("%f", &pedagio);
+        if (pedagio < 0)
+            break;
+        printf("Distância em (KM): "), scanf("%f", &distancia);
 
+        // Processing
+        if (pedagio > valorPedagioCliente) {
+            trechosAcimaValorPedagioCliente++;
+        }
+
+        if ((distancia >= 150) && (pedagio <= valorPedagioCliente)) {
+            trechosAcima150concordaPagar++;
+        }
+        // contador
+        trechosTotais++;
+
+    } while (pedagio >= 0);
     // Outputs
-
+    printf("%d (trechos com valor acima do qual elenega-se a pagar)\n%d (quantidade de trechos informados)\n%d (trechos acima de 150 Km com valor depedágio aceito por ele)", trechosAcimaValorPedagioCliente, trechosTotais, trechosAcima150concordaPagar);
     return 0;
 }

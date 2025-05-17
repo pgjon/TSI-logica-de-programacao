@@ -9,20 +9,38 @@
 
 */
 # include <stdio.h>
-# include <stdlib.h>
 # include <locale.h>
-# include <math.h>
 
 int main(){
     setlocale(LC_ALL, "pt_BR.UTF-8");
 
     // Variables
-    
+    int sucessor = 0, antecessor = 0, atual = 0, contador = 0;
+
     // Inputs
-
+    printf("Programa para receber (n) números e imprimir a soma dos sucessores que são menores que os antecessores\n");
     // Processing
+    while (1) {         
+        printf(": "), scanf("%d", &antecessor);
+        if (antecessor < 0) {
+            break;
+        }
+        
+        printf(": "), scanf("%d", &sucessor);
+        if (sucessor < 0) {
+            break;
+        }
 
+        if (antecessor > sucessor) {
+            if (atual > antecessor) {
+                contador++;
+            }
+            contador++;
+        }
+        
+        atual = sucessor;
+    }
     // Outputs
-
+    printf("%d", contador);
     return 0;
 }

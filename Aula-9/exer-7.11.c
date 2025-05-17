@@ -12,11 +12,13 @@ int main(){
     setlocale(LC_ALL, "pt_BR.UTF-8");
 
     // Variables
-    
-    // Inputs
+    int contador = 5;
 
     // Processing
-
+    do {
+        printf("%d ", contador);
+        contador++;
+    } while (contador <= 15);
     // Outputs
 
     return 0;
