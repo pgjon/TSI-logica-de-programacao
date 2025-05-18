@@ -20,22 +20,22 @@ int main(){
     printf("Digite valor de D: "); scanf("%d", &D);
     printf("Digite valor de E: "); scanf("%d", &E);
     // Processing
-    if (A == 1){
+    if (A == 1) {
         printf("Amarelo");
-        if (B == 1){
+        if (B == 1) {
             printf("Azul");
         }
         printf("Preto");
-        if (D == 1){
+        if (D == 1) {
             printf("Verde");
-        }else{
+        } else {
             printf("Violeta");
         }
-    }else{
-        if (C == 1){
+    } else {
+        if (C == 1) {
             printf("Vermelho");
         }
-        if (E == 1){
+        if (E == 1) {
             printf("Laranja");
             printf("Cinza");
         }

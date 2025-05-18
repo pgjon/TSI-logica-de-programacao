@@ -14,22 +14,22 @@ int main(){
     int A, B, C;
 
     // Inputs
-    printf("Digite o valor de A: ");scanf("%d", &A);
-    printf("Digite o valor de B: ");scanf("%d", &B);    
-    printf("Digite o valor de C: ");scanf("%d", &C);    
+    printf("Digite o valor de A: "); scanf("%d", &A);
+    printf("Digite o valor de B: "); scanf("%d", &B);    
+    printf("Digite o valor de C: "); scanf("%d", &C);    
     
     // Processing
-    if (A == 1){
+    if (A == 1) {
         printf("Verde\n");
-    }else{
-        if (B == 2){
-            if (C == 3){
+    } else {
+        if (B == 2) {
+            if (C == 3) {
                 printf("Azul\n");
-            }else{
+            } else {
                 printf("Uva\n");
                 printf("Pêra\n");
             }
-        }else
+        } else
             printf("Preto\n");
     }
     

@@ -17,8 +17,8 @@ int main(){
     printf("Digite valor de B: "); scanf("%d", &B);
     printf("Digite valor de C: "); scanf("%d", &C);
     // Processing
-    if (A == 1){
-        if (B = 1){
+    if (A == 1) {
+        if (B = 1) {
             printf("A");
             printf("B");
         }
@@ -26,10 +26,10 @@ int main(){
     
     printf("C");
 
-    if (C == 1){
+    if (C == 1) {
         printf("D");
         printf("E");
-    }else{
+    } else {
         printf("F");
     }
 

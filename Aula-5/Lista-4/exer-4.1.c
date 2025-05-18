@@ -18,15 +18,15 @@ int main(){
     printf("Digite o valor de B: ");scanf("%d", &B);
     printf("Amarelo");
     // Processing
-    if (A == 1){
+    if (A == 1) {
         printf("Azul");
         printf("Verde");
         printf("Roxo");
-    }else{
+    }else {
         printf("Pêra");
-        if (B == 1){
+        if (B == 1) {
             printf("Maça");
-        }else{
+        }else {
             printf("Morango");
         }
     }

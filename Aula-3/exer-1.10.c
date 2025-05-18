@@ -13,9 +13,12 @@
                                                     1725 (salário final de cada empregado) 
                                                     8100 (lucro da loja)
 */
-#include <stdio.h>
+# include <stdio.h>
+# include <locale.h>
 
 int main() {
+    setlocale(LC_ALL, "pt_BR.UTF-8");
+
     // Variables
     int numeroDeEmpregados, numeroDeBikesVendidas;
     float salarioMinimo, precoCustoBike, salarioFinal, lucroLoja, precoVendaBike, comissaoTotal, comissaoPorVendedor;
@@ -24,17 +27,17 @@ int main() {
     printf("Digite a quantidade de empregados: ");
     scanf("%d", &numeroDeEmpregados);
 
-    printf("Digite valor do salario minimo: ");
+    printf("Digite valor do salário mínimo: ");
     scanf("%f", &salarioMinimo);
 
-    printf("Digite o preco de custo de cada bicicleta: ");
+    printf("Digite o preço de custo de cada bicicleta: ");
     scanf("%f", &precoCustoBike);
 
     printf("Digite a quantidade de bicicletas vendidas: ");
     scanf("%d", &numeroDeBikesVendidas);
 
     // Processing
-    precoVendaBike = precoCustoBike * 1.5; // 50% acrescimo sobre o preco de custo
+    precoVendaBike = precoCustoBike * 1.5; // 50% acrescimo sobre o preço de custo
     
     // Comissão é 15% sobre o preço de custo de CADA bicicleta vendida
     comissaoTotal = (precoCustoBike * 0.15) * numeroDeBikesVendidas;
@@ -52,7 +55,7 @@ int main() {
     lucroLoja = valorTotalVendido - custoTotalBicicletas - totalSalarios;
 
     // Outputs
-    printf("\n%.0f (salario final de cada empregado)\n", salarioFinal);
+    printf("\n%.0f (salário final de cada empregado)\n", salarioFinal);
     printf("%.0f (lucro loja)\n", lucroLoja);
 
     return 0;
