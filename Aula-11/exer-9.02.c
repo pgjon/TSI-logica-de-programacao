@@ -12,12 +12,18 @@ int main(){
     setlocale(LC_ALL, "pt_BR.UTF-8");
 
     // Variables
-    
+    int qtdAlunos, i;
+    float nota, media, notas = 0;
     // Inputs
-
+    printf("Programa para receber (N) Alunos e suas notas e informar suas notas.\n");
+    printf("Quantidade de alunos?: "); scanf("%d", &qtdAlunos);
     // Processing
-
+    for (i = 1; i <= qtdAlunos; i++) {
+        printf("Nota do %dº aluno: ", i); scanf("%f", &nota);
+        notas += nota;
+    }
+    media = (float) notas / qtdAlunos;
     // Outputs
-
+    printf("%.2f (média)", media);
     return 0;
 }
