@@ -11,12 +11,17 @@ int main(){
     setlocale(LC_ALL, "pt_BR.UTF-8");
 
     // Variables
-    
+    int soma = 0, qtdVezes = 0, num_atual = 1;
     // Inputs
 
     // Processing
-
+    while (soma < 100) {
+        soma += num_atual;
+        num_atual++;
+        qtdVezes++;
+        printf("%d %d\n", qtdVezes, soma);
+    }
     // Outputs
-
+    printf("\n\n%d", qtdVezes);
     return 0;
 }

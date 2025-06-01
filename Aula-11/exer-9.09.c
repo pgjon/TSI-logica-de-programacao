@@ -4,7 +4,7 @@
     8           |   100         |   200
                 |               |
     [Saída]     |   [Saída]     |   [Saída]
-    3           |   7           |   89.10
+    3           |   7           |   8
 
 */
 # include <stdio.h>
@@ -14,12 +14,16 @@ int main(){
     setlocale(LC_ALL, "pt_BR.UTF-8");
 
     // Variables
-    
+    float comida; int dias = 0;
     // Inputs
+    printf("Qual capacidade de comida inicial? (KG): "); scanf("%f", &comida);
 
     // Processing
-
+    while (comida > 1) {
+        dias++;
+        comida = (float) comida / 2;
+    }
     // Outputs
-
+    printf("%d dia(s)", dias);
     return 0;
 }
