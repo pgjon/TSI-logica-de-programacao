@@ -21,12 +21,22 @@ int main(){
     setlocale(LC_ALL, "pt_BR.UTF-8");
 
     // Variables
-    
+    int X, Z, qtdTermos = 0, somaTermos = 0;
     // Inputs
+    printf("Valor de X: "); scanf("%d", &X);
+    printf("Valor de Z: "); scanf("%d", &Z);
 
     // Processing
+    while (Z < X) {
+        printf("Z é menor que X\nZ: "); scanf("%d", &Z);
+    }
 
+    while (somaTermos <= Z) {
+        somaTermos += X;
+        X++;
+        qtdTermos++;
+    }
     // Outputs
-
+    printf("%d", qtdTermos);
     return 0;
 }
