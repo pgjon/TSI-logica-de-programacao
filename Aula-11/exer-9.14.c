@@ -11,11 +11,23 @@ int main(){
     setlocale(LC_ALL, "pt_BR.UTF-8");
 
     // Variables
-    
+    int i = 1, fib, j, anterior = 0;
     // Inputs
-
+    printf("Programa para mostrar os 20 termos de fibonacci\n");
+    
     // Processing
-
+    for (j = 1; j <= 20; j++) {
+        if (j == 1) {
+            fib = 0; // First term
+        } else if (j == 2) {
+            fib = 1; // Second term
+        } else {
+            fib = i + anterior; // Fibonacci calculation
+        }
+        anterior = i;
+        i = fib;
+        printf("%d ", fib);
+    }
     // Outputs
 
     return 0;
