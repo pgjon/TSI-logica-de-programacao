@@ -11,26 +11,21 @@
     [Saída]    | [Saída]   | [Saída]   | [Saída]
     1          | 6         | 120       | 24
 */
-# include <stdio.h>
-# include <locale.h>
+#include <stdio.h>
+#include <locale.h>
 
 int main(){
     setlocale(LC_ALL, "pt_BR.UTF-8");
 
-    // Variables
-    int fatorial, i, n, j;
+    int fatorial = 1, n, i;
 
-    fatorial = 1;
-    // Inputs
-    printf("Digite um valor positivo para calcular o fatorial: "); scanf("%d", &j);
-    n = j;
-    // Processing
+    printf("Digite um valor positivo para calcular o fatorial: "); 
+    scanf("%d", &n);
+    
     for (i = n; i > 1; i--) { 
-        fatorial *= j;
-        j--;
+        fatorial *= i;
     }
-    // Outputs
+    
     printf("Fatorial de: %d é %d", n, fatorial);
-
     return 0;
 }
