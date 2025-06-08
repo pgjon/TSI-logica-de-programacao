@@ -13,12 +13,16 @@ int main(){
     setlocale(LC_ALL, "pt_BR.UTF-8");
 
     // Variables
-    
+    int i, j = 1; float soma = 0.0;
     // Inputs
 
     // Processing
-
+    for (i = 1; i < 100; i += 2) {
+        soma =  soma + ((float)i / j);
+        j++;
+        printf("%f\n", soma);
+    }
     // Outputs
-
+    printf("\n%f", soma);
     return 0;
 }

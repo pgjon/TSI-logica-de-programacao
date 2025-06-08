@@ -19,11 +19,27 @@ int main(){
     setlocale(LC_ALL, "pt_BR.UTF-8");
 
     // Variables
-    
+    int i, j = 1000, razao = 3, termo; float sum = 0;
     // Inputs
 
     // Processing
+    do {
+        printf("Termo: "); scanf("%d", &termo);
 
+        for (i = 1; i <= termo; i++) {    // termo 2 
+            if (j % 2 == 0) {
+                sum = sum + (float) j / i;
+            } else {
+                sum = sum - (float) j / i;
+            }
+            j -= razao;
+        }
+        
+        printf("%f\n", sum);
+        sum = 0;
+        j = 1000;
+    } while (termo > 0);
+    
     // Outputs
 
     return 0;

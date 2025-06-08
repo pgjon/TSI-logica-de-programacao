@@ -19,22 +19,17 @@ int main(){
     setlocale(LC_ALL, "pt_BR.UTF-8");
 
     // Variables
-    float S = 0.0;
-    int i, j = 1, razaoJ = 3;
+    
+    int seq = 1, razao = 3, i, soma = 0;
     // Inputs
-
-    // Processing
-    for (i = 1; i <= 10; i++) {
-        if (j % 2 == 0) {
-            S = S - (float) i / j;
-        } else {
-            S = S + (float) i / j;
-        }
-        j = j + razaoJ;
-        razaoJ += 2;
+    
+    // Processing  1 4 9 16 25 36 
+    for (i = 1; i <= 100; i++) {
+        printf("%d ", seq);
+        seq = razao + seq;
+        razao = razao + 2;  
     }
     // Outputs
-    printf("%f", S);
 
     return 0;
 }
