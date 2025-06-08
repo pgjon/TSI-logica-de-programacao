@@ -15,17 +15,33 @@
     0
 */
 # include <stdio.h>
+# include <stdlib.h>
 # include <locale.h>
 
 int main(){
     setlocale(LC_ALL, "pt_BR.UTF-8");
 
     // Variables
-    
+    int termo, i; float pi;
     // Inputs
 
     // Processing
+    do {
+        pi = 0;
 
+        printf("Termo: "); scanf("%d", &termo);
+        
+        for (i = 1; i <= termo; i++) {
+            int j = 2 * i - 1; // 1, 3, 5, 7, 9 ...
+
+            if (i % 2 == 0) {
+                pi -= (float) 4 / j;
+            } else {
+                pi += (float) 4 / j;
+            }
+        }
+        printf("%.6f\n", pi);
+    } while  (termo > 0);
     // Outputs
 
     return 0;

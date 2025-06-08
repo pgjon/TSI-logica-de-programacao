@@ -20,11 +20,23 @@ int main(){
     setlocale(LC_ALL, "pt_BR.UTF-8");
 
     // Variables
-    
+    int i, j, resultado = 0;
     // Inputs
-
+    printf("Programa para mostrar taboada de 1 até 10 para os números de 1 a 5.\n");
     // Processing
-
+    for (i = 1; i <= 10; i++) {
+        for (j = 1; j <= 5; j++) {
+            resultado = i * j;
+            if (i < 10 && resultado < 10) {
+                printf("0%d x 0%d = 0%d    ", i, j, resultado);
+            } else  if (i == 10){
+                printf("%d x 0%d = %d    ", i, j, resultado);
+            } else {
+                printf("0%d x 0%d = %d    ", i, j, resultado);
+            }
+        }
+        printf("\n");
+    }
     // Outputs
 
     return 0;
