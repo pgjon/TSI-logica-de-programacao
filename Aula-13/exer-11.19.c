@@ -12,17 +12,28 @@
     -1
 */
 # include <stdio.h>
+# include <stdlib.h>
 # include <locale.h>
 
 int main(){
     setlocale(LC_ALL, "pt_BR.UTF-8");
 
     // Variables
-    
+    int i, num, soma = 0;
     // Inputs
-
+    printf("Me diga um número para eu lhe dizer se ele é perfeito ou não.\nNúmero: "); scanf("%d", &num);
     // Processing
+    for (i = 1; i <= (num / 2); i++) {
+        if (num % i == 0) {
+            soma += i;
+        }
+    }
 
+    if (soma == num) {
+        printf("É perfeito!");
+    } else {
+        printf("Não é perfeito!");
+    }
     // Outputs
 
     return 0;

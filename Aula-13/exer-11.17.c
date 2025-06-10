@@ -19,7 +19,7 @@
     55 (dist.)   25 (t)                     
                                             Etapa 3: 55 (tempo total da etapa)
                                             3 (trechos com menos de 50 Km)
-                                            95 (dist. do perc. da etapamais curta) 
+                                            95 (dist. do perc. da etapa mais curta) 
 */
 # include <stdio.h>
 # include <locale.h>
@@ -28,12 +28,34 @@ int main(){
     setlocale(LC_ALL, "pt_BR.UTF-8");
 
     // Variables
-    
+    int i, j, etapa, trecho, distancia, tempo, tempoTotal = 0, distanciaTotal = 0;
+    int trechoMenorQue50 = 0, etapaMaisCurta = 9999;
     // Inputs
-
+    printf("Quantidade de etapas? "); scanf("%d", &etapa);
     // Processing
+    for (i = 1; i <= etapa; i++) {
+        printf("Quantidade de trechos? "); scanf("%d", &trecho);
+        for (j = 1; j <= trecho; j++) {
+            printf("Distância? "); scanf("%d", &distancia);
+            printf("Tempo? "); scanf("%d", &tempo);
+            tempoTotal += tempo;
+            distanciaTotal += distancia;
+            if (distancia < 50) {
+                trechoMenorQue50++;
+            }
+        }
+        if (distanciaTotal < etapaMaisCurta) {
+            etapaMaisCurta = distanciaTotal;
+            distanciaTotal = 0;
+        }
+
+        printf("Etapa %d: %d (tempo total de etapa)\n", i, tempoTotal);
+        tempoTotal = 0;
+    }
+    
 
     // Outputs
-
+    printf("%d (trechos com menos de 50 Km)\n", trechoMenorQue50);
+    printf("%d (dist. do perc. da etapa mais curta)", etapaMaisCurta);
     return 0;
 }
