@@ -16,6 +16,9 @@ int main(){
     int i, Q, Z[10], W[10], aux = 0;
     // Inputs
     printf("Digite um inteiro (Q): "); scanf("%d", &Q);
+    while(Q < 1 || Q > 10) {
+        printf("Valor inválido!\nQs: )"); scanf("%d", &Q);
+    }
     // Processing
     for (i = 0; i < Q; i++) {
         printf("Digite um número: "); scanf("%d", &Z[i]);
@@ -25,8 +28,7 @@ int main(){
         W[aux] = Z[i];
         printf("%d ", W[aux]);
         aux++;
-    } 
+    } printf("(vetor W)");
     
-    // printf("(vetor W)");
     return 0;
 }

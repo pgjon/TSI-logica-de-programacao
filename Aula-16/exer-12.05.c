@@ -16,6 +16,9 @@ int main(){
     int i, Q, Z[10], W[10];
     // Inputs
     printf("Digite um inteiro (Q): "); scanf("%d", &Q);
+    while(Q < 1 || Q > 10) {
+        printf("Valor inválido! Máximo!\nQ: )"); scanf("%d", &Q);
+    }
     // Processing
     for (i = 0; i < Q; i++) {
         printf("Digite um número: "); scanf("%d", &Z[i]);
