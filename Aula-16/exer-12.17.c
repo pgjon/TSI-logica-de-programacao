@@ -21,8 +21,8 @@ int main(){
     }
 
     printf("Digite quantidade de elementos do vetorR: "); scanf("%d", &R);
-    while (R < 0 || Q + R > 10) {
-        printf("Valor fora da faixa!\nR não pode ser menor que 0 nem a soma de Q + R não pode ultrapassar 10.\nR: "); scanf("%d", &R);
+    while (R < 0 || Q + R > 20) {
+        printf("Valor fora da faixa!\nR não pode ser menor que 0 nem a soma de Q + R não pode ultrapassar 20.\nR: "); scanf("%d", &R);
     }
 
     for (i = 0; i < Q; i++) {
@@ -49,7 +49,7 @@ int main(){
                 break;
             }
         }
-        if (!repetido) {
+        if (!repetido) { // significa dizer que if (repetido == 0), ou seja não tem número repetido
             vetorU[acc++] = vetorR[i];
         }
     }
