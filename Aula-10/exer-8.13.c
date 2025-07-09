@@ -1,5 +1,5 @@
 /*
-    Escreva um algoritmo para ler um valor X (validar -com repetição-para aceitar apenas valores entre 1 (inclusive) e 10 (inclusive). 
+    Escreva um algoritmo para ler um valor X (validar com repetição para aceitar apenas valores entre 1 (inclusive) e 10 (inclusive). 
     
     [Entrada]               [Saída]
     0
